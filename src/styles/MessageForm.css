@@ -1,0 +1,15 @@
+
+.form-content {
+    display: flex;
+    width: 1800px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content input {
+    width: 700px;
+    height: 34px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
