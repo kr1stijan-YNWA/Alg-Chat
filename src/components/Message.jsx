@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { avatarImages } from "../library/avatar";
 import "../styles/Message.css";
-
+/*-*/ 
 export function Message(props) {
   const { isCurrentUser, avatarIndex, author, text, time } = props;
 

@@ -4,7 +4,7 @@
   overflow-x: auto;
 }
 
-.current-user .message-container { /*poruke current usera da se pokazuju sa desne strane*/
+.current-user .message-container { /*poruke current usera da se pokazuju sa desne strane + */
   flex-direction: row-reverse;
 }
 
