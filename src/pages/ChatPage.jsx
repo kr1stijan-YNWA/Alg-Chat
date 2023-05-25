@@ -25,24 +25,6 @@ export function ChatPage() {
     context.setUsername("");
   }
 
-  const messageComponents = messages.map((message) => {
-    const time = new Date(message.timestamp).toLocaleTimeString().slice(0, -3);
-    const isCurrentUser = context.username === message.author.username;
-    const messageClassNames = isCurrentUser ? "message-right" : "message-left";
-    return (
-      <div className={`message ${messageClassNames}`} key={message.id}>
-    
-      <Message
-        key={message.id}
-        avatarIndex={message.author.avatarIndex}
-        author={message.author.username}
-        text={message.text}
-        time={time}
-      />
-      </div>
-    );
-  });
-
   useEffect(() => {
     const drone = new window.Scaledrone("nbuHcqqhgdYvrUEU");
 
@@ -76,7 +58,7 @@ export function ChatPage() {
   return (
     <div>
       <div className="title-content">
-        <h1>welcome <p>{context.username}</p> to portal of glory </h1>
+        <h1>welcome <p>{context.username}</p> to the portal of glory</h1>
         <button
           className="sign-out-button"
           type="button"
@@ -86,7 +68,23 @@ export function ChatPage() {
         </button>
       </div>
       <div className="chat-page-content">
-        <div className="message-list">{messageComponents}</div>
+        <div className="message-list">
+          {messages.map((message) => {
+            const time = new Date(message.timestamp).toLocaleTimeString().slice(0, -3);
+            const isCurrentUser = context.username === message.author.username;
+            return (
+              <div className={`message ${isCurrentUser ? 'current-user' : ''}`} key={message.id}>
+                <Message
+                  isCurrentUser={isCurrentUser}
+                  avatarIndex={message.author.avatarIndex}
+                  author={message.author.username}
+                  text={message.text}
+                  time={time}
+                />
+              </div>
+            );
+          })}
+        </div>
         <MessageForm
           onSubmit={handleSubmit}
           username={context.username}

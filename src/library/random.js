@@ -1,5 +1,5 @@
-const adjectives = ['Arnold', 'Jackie', 'Steven'];
-const nouns = ['Chan', 'Schwarzenegger', 'Segal'];
+const adjectives = ['Monkey', 'Sanji', 'Goku', 'Pain', 'Roronoa', 'Vegeta', 'Tanjiro', 'Naruto'];
+const nouns = ['Luffy', 'Uchiha', 'Kamaboko', 'Lee', 'Guy', 'Uzui', 'Idk', 'he-he'];
 
 export function getRandomName() {
     const adjectiveIndex = Math.floor(Math.random() * adjectives.length);

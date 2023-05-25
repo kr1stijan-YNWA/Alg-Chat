@@ -19,7 +19,7 @@ export function SignInForm(props) {
     }
 
     function handleUsernameChange(value) {
-        setFormState(value);
+        setFormState(value.substring(0, 20));  //limita username na 20 char
     }
 
     function handleAvatarChange(value) {
