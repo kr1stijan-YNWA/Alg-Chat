@@ -18,11 +18,11 @@ export function SignInForm(props) {
         });
     }
 
-    function handleUsernameChange(value) {
+    function handleUsernameChange(value) { //ažurira ovaj gore fromstate na ime koje smo mi postavili
         setFormState(value.substring(0, 20));  //limita username na 20 char
     }
 
-    function handleAvatarChange(value) {
+    function handleAvatarChange(value) { //postavlja avatar. isto kao handleusername funkcija
         setAvatar(value);
     }
 
@@ -34,7 +34,7 @@ export function SignInForm(props) {
                 onChange={handleUsernameChange}
                 value={formState} />
             <FormField>
-                <RandomNameButton onRandomName={handleUsernameChange} />
+                <RandomNameButton onRandomName={handleUsernameChange} /> 
             </FormField>
             <FormField>
                 <Button type="submit" label="Sign in" />
@@ -42,3 +42,6 @@ export function SignInForm(props) {
         </form>
     );
 }
+
+//obrazac za prijavu. unos imena i avatara. Avatarformfield jsx koristi za odabir avatar a inputformfield za unos mena. 
+/**RandomNameButon za kreiranje random usera */

@@ -26,3 +26,7 @@ export function SignInPage() {
         </div>
     );
 };
+/**koristi  usecontext hook da pristupi vrijednostima appcontexta. Tu vrijednost onda dodijeli varijabli "context"
+ * 
+ * ako je korisnik već prijavit onda ga prebaci na chat stranicu. ako nije onda na stranicu za prijavu tj sign in.
+ */

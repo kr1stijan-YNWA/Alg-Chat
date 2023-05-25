@@ -32,3 +32,5 @@ function App() {
 }
 
 export default App;
+
+/** glavna komponenta, prvo provjerava ima li error u contextu. ako ima baca gresku, ako nema pokazuje glavne komponente. */

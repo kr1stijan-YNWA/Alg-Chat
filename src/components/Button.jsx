@@ -10,3 +10,5 @@ export function Button(props) {
         </button> 
     );
 }
+
+/**kreira button sa stavkama koje se mogu podesiti preko propsa.  */

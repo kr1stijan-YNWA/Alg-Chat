@@ -25,7 +25,7 @@ export function ChatPage() {
     context.setUsername("");
   }
 
-  useEffect(() => {
+  useEffect(() => {   /**povezivaje sa scaledronom i soboom algrebra */
     const drone = new window.Scaledrone("7kO2tTVsP5pRC0lH");
 
     drone.on("open", (error) => {
@@ -40,7 +40,7 @@ export function ChatPage() {
     });
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { 
     if (chatRoom !== null && !ready) {
       chatRoom.on("data", (data) => {
         setMessages((messages) => {
@@ -55,7 +55,7 @@ export function ChatPage() {
     return <Navigate to="/" replace />;
   }
 
-  return (
+  return (   /**vraća taj kao room tj stranicu za chat na kojoj se nalazi pozdravm lista poruka koje su mapirane i tipka za odjavu + unos novi poruka */
     <div>
       <div className="title-content">
         <h1>welcome <p>{context.username}</p> to the portal of glory</h1>
