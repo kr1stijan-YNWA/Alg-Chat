@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { avatarImages } from "../library/avatar";
 import "../styles/Message.css";
-
+/*--*/ 
 export function Message(props) {
   const { isCurrentUser, avatarIndex, author, text, time } = props;
 
@@ -15,11 +15,11 @@ export function Message(props) {
 
   return (
     <div className={messageContainerClass}>
-      {isCurrentUser && (
+      {isCurrentUser ? (
         <div className="avatar">
           <img src={avatarImages[avatarIndex]} alt={author} width={40} height={40} />
         </div>
-      )}
+      ) : null}
 
       <div className="message-content">
         <div className="message-author">{author}</div>
@@ -27,11 +27,11 @@ export function Message(props) {
         <div className="message-time">{time}</div>
       </div>
 
-      {!isCurrentUser && (
+      {!isCurrentUser ? (
         <div className="avatar">
           <img src={avatarImages[avatarIndex]} alt={author} width={40} height={40} />
         </div>
-      )}
+      ) : null}
     </div>
   );
 }
