@@ -26,7 +26,7 @@ export function ChatPage() {
   }
 
   useEffect(() => {
-    const drone = new window.Scaledrone("nbuHcqqhgdYvrUEU");
+    const drone = new window.Scaledrone("7kO2tTVsP5pRC0lH");
 
     drone.on("open", (error) => {
       if (error) {
